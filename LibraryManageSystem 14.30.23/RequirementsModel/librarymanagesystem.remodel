@@ -1,0 +1,278 @@
+UseCaseModel LibraryManageSystem {
+
+	UC::searchBook include searchDataBase definedBySSD(SearchBookSSD) relatedService(SearchBookService)
+	UC::returnBook include searchDataBase definedBySSD(ReturnBookSSD) relatedService(ReturnBookService)
+	UC::buyBook include searchDataBase
+	UC::searchDataBase
+
+	Actor Student {
+		searchBook
+		returnBook
+	}
+
+	Actor LibraryManager {
+		buyBook
+	}
+
+	Interaction SearchBookSSD {
+
+		[Participants: Student SearchBookService]
+
+		CallMessage::SearchBookSSDCallMessage1(inputCard SearchBookSSDCallMessage1SendingEnd -> SearchBookSSDExecution1StartEnd)
+		ReturnMessage::SearchBookSSDCallMessage1Return(SearchBookSSDExecution1FinishEnd -> SearchBookSSDCallMessage1ReturnReceivingEnd SearchBookSSDCallMessage1)
+		CallMessage::SearchBookSSDCallMessage3(inputPassword SearchBookSSDCallMessage3SendingEnd -> SearchBookSSDExecution2StartEnd)
+		ReturnMessage::SearchBookSSDCallMessage3Return(SearchBookSSDExecution2FinishEnd -> SearchBookSSDCallMessage3ReturnReceivingEnd SearchBookSSDCallMessage3)
+		CallMessage::SearchBookSSDCallMessage5(searchBook SearchBookSSDCallMessage5SendingEnd -> SearchBookSSDExecution3StartEnd)
+		ReturnMessage::SearchBookSSDCallMessage5Return(SearchBookSSDExecution3FinishEnd -> SearchBookSSDCallMessage5ReturnReceivingEnd SearchBookSSDCallMessage5)
+		CallMessage::SearchBookSSDCallMessage7(printBookList SearchBookSSDCallMessage7SendingEnd -> SearchBookSSDExecution4StartEnd)
+		ReturnMessage::SearchBookSSDCallMessage7Return(SearchBookSSDExecution4FinishEnd -> SearchBookSSDCallMessage7ReturnReceivingEnd SearchBookSSDCallMessage7)
+
+		Execution::SearchBookSSDExecution1(SearchBookService SearchBookSSDExecution1StartEnd SearchBookSSDExecution1FinishEnd)
+		Execution::SearchBookSSDExecution2(SearchBookService SearchBookSSDExecution2StartEnd SearchBookSSDExecution2FinishEnd)
+		Execution::SearchBookSSDExecution3(SearchBookService SearchBookSSDExecution3StartEnd SearchBookSSDExecution3FinishEnd)
+		Execution::SearchBookSSDExecution4(SearchBookService SearchBookSSDExecution4StartEnd SearchBookSSDExecution4FinishEnd)
+
+		MessageEnd::SearchBookSSDCallMessage1SendingEnd(Student SearchBookSSDCallMessage1)
+		ExecutionEnd::SearchBookSSDExecution1StartEnd(SearchBookService SearchBookSSDExecution1)
+		ExecutionEnd::SearchBookSSDExecution1FinishEnd(SearchBookService SearchBookSSDExecution1)
+		MessageEnd::SearchBookSSDCallMessage1ReturnReceivingEnd(Student SearchBookSSDCallMessage1Return)
+		MessageEnd::SearchBookSSDCallMessage3SendingEnd(Student SearchBookSSDCallMessage3)
+		ExecutionEnd::SearchBookSSDExecution2StartEnd(SearchBookService SearchBookSSDExecution2)
+		ExecutionEnd::SearchBookSSDExecution2FinishEnd(SearchBookService SearchBookSSDExecution2)
+		MessageEnd::SearchBookSSDCallMessage3ReturnReceivingEnd(Student SearchBookSSDCallMessage3Return)
+		MessageEnd::SearchBookSSDCallMessage5SendingEnd(Student SearchBookSSDCallMessage5)
+		ExecutionEnd::SearchBookSSDExecution3StartEnd(SearchBookService SearchBookSSDExecution3)
+		ExecutionEnd::SearchBookSSDExecution3FinishEnd(SearchBookService SearchBookSSDExecution3)
+		MessageEnd::SearchBookSSDCallMessage5ReturnReceivingEnd(Student SearchBookSSDCallMessage5Return)
+		MessageEnd::SearchBookSSDCallMessage7SendingEnd(Student SearchBookSSDCallMessage7)
+		ExecutionEnd::SearchBookSSDExecution4StartEnd(SearchBookService SearchBookSSDExecution4)
+		ExecutionEnd::SearchBookSSDExecution4FinishEnd(SearchBookService SearchBookSSDExecution4)
+		MessageEnd::SearchBookSSDCallMessage7ReturnReceivingEnd(Student SearchBookSSDCallMessage7Return)
+
+	}
+
+	Interaction ReturnBookSSD {
+
+		[Participants: Student ReturnBookService]
+
+	}
+
+	Service LibraryManageSystemSystem {
+
+		[Operation]
+		returnBook()
+		buyBook()
+		searchDataBase()
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service SearchBookService {
+
+		[Operation]
+		inputCard(cardID)
+		inputPassword(password)
+		searchBook()
+		printBookList()
+
+	}
+
+	Service ReturnBookService {
+
+		[Operation]
+		checkStudentCard()
+		checkBookStatus(password)
+		returnBook()
+		updateDataBase()
+
+	}
+
+	Service BuyBookService {
+
+		[Operation]
+		loginAccount()
+		checkCurBookNum(password)
+		buyBook()
+		updateBookData()
+
+	}
+
+	Contract SearchBookService::inputCard(cardID : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract SearchBookService::inputPassword(password : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract SearchBookService::searchBook() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract SearchBookService::printBookList() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract LibraryManageSystemSystem::returnBook() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract LibraryManageSystemSystem::buyBook() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract LibraryManageSystemSystem::searchDataBase() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ReturnBookService::checkStudentCard() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ReturnBookService::checkBookStatus(password : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ReturnBookService::updateDataBase() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract BuyBookService::loginAccount() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract BuyBookService::checkCurBookNum(password : String) : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract BuyBookService::updateBookData() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+}
+
+DomainModel LibraryManageSystem {
+
+	@AutoCRUD Entity StudentCard {
+		CardId : Integer
+		CardStatus : CardStatus[NORMAL|DISMISS]
+		StudentId : Integer
+
+		[Refer]
+		StudentCardtoStudent : Student Association
+	StudentCardtoReturnBookAction : ReturnBookAction Association
+		StudentCardtoBorrowBookAction : BorrowBookAction Association
+	}
+
+	@AutoCRUD Entity Student {
+		StudentName : String
+		StudentId : Integer
+		CardId : Integer
+
+		[Refer]
+		StudenttoStudentCard : StudentCard ! Association
+	}
+
+@AutoCRUD Entity BorrowBookAction {
+		BookId : String
+		StudentCard : Integer
+		ActionId : Integer
+
+		[Refer]
+		BorrowBookActiontoBook : Book Association
+		BorrowBookActiontoUpdateBookData : UpdateBookData Association
+	}
+
+	@AutoCRUD Entity Book {
+		BookName : String
+		BookId : Integer
+	}
+
+	@AutoCRUD Entity ReturnBookAction {
+		BookId : String
+		StudentCard : Integer
+		ActionId : Integer
+
+		[Refer]
+		ReturnBookActiontoBook : Book Association
+		ReturnBookActiontoUpdateBookData : UpdateBookData Association
+	}
+
+	@AutoCRUD Entity UpdateBookData {
+		BookId : Integer
+		ActionId : Integer
+	}
+
+	@AutoCRUD Entity LibraryManager {
+		ManagerName : String
+		ManagerId : Integer
+
+		[Refer]
+		LibraryManagertoBuyBookAction : BuyBookAction Association
+	}
+
+	@AutoCRUD Entity BuyBookAction {
+		ManagerId : Integer
+		ActionId : Integer
+
+		[Refer]
+		BuyBookActiontoUpdateBookData : UpdateBookData Association
+	}
+
+}
+
