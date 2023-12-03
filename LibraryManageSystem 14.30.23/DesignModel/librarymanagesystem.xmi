@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:designModel="http://www.example.org/designModel">
+  <designModel:Controller description="Controller" label="Controller"/>
+  <designModel:DesignModel>
+    <classdiagram name="LibraryManageSystem">
+      <class isCRUD="true" name="StudentCard">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getCardId"/>
+        <operation name="setCardId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getCardStatus"/>
+        <operation name="setCardStatus">
+          <parameter name="newValue"/>
+        </operation>
+        <operation name="getStudentId"/>
+        <operation name="setStudentId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="StudentCardtoStudent" type="Association" class="/1/@classdiagram/@class.1"/>
+        <reference name="StudentCardtoReturnBookAction" type="Association" class="/1/@classdiagram/@class.4"/>
+        <reference name="StudentCardtoBorrowBookAction" type="Association" class="/1/@classdiagram/@class.2"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="CardId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="CardStatus">
+          <type xsi:type="designModel:EnumEntity" name="CardStatus">
+            <enumitem name="NORMAL"/>
+            <enumitem name="DISMISS"/>
+          </type>
+        </attribute>
+        <attribute name="StudentId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="Student">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getStudentName"/>
+        <operation name="setStudentName">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getStudentId"/>
+        <operation name="setStudentId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getCardId"/>
+        <operation name="setCardId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="StudenttoStudentCard" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.0"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="StudentName">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+        </attribute>
+        <attribute name="StudentId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="CardId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="BorrowBookAction">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getBookId"/>
+        <operation name="setBookId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getStudentCard"/>
+        <operation name="setStudentCard">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getActionId"/>
+        <operation name="setActionId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="BorrowBookActiontoBook" type="Association" class="/1/@classdiagram/@class.3"/>
+        <reference name="BorrowBookActiontoUpdateBookData" type="Association" class="/1/@classdiagram/@class.5"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="BookId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+        </attribute>
+        <attribute name="StudentCard">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="ActionId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="Book">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getBookName"/>
+        <operation name="setBookName">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getBookId"/>
+        <operation name="setBookId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="BookName">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+        </attribute>
+        <attribute name="BookId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="ReturnBookAction">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getBookId"/>
+        <operation name="setBookId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getStudentCard"/>
+        <operation name="setStudentCard">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getActionId"/>
+        <operation name="setActionId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="ReturnBookActiontoBook" type="Association" class="/1/@classdiagram/@class.3"/>
+        <reference name="ReturnBookActiontoUpdateBookData" type="Association" class="/1/@classdiagram/@class.5"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="BookId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+        </attribute>
+        <attribute name="StudentCard">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="ActionId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="UpdateBookData">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getBookId"/>
+        <operation name="setBookId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getActionId"/>
+        <operation name="setActionId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="BookId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="ActionId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="LibraryManager">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getManagerName"/>
+        <operation name="setManagerName">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getManagerId"/>
+        <operation name="setManagerId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="LibraryManagertoBuyBookAction" type="Association" class="/1/@classdiagram/@class.7"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="ManagerName">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+        </attribute>
+        <attribute name="ManagerId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class isCRUD="true" name="BuyBookAction">
+        <operation name="addLinkOneToOne">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addLinkOneToMany">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="getManagerId"/>
+        <operation name="setManagerId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <operation name="getActionId"/>
+        <operation name="setActionId">
+          <parameter name="newValue">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+          </parameter>
+        </operation>
+        <reference name="BuyBookActiontoUpdateBookData" type="Association" class="/1/@classdiagram/@class.5"/>
+        <reference name="manager" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.8"/>
+        <attribute name="ManagerId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+        <attribute name="ActionId">
+          <type xsi:type="designModel:PrimitiveTypeCS" name="Integer"/>
+        </attribute>
+      </class>
+      <class name="EntityManager">
+        <operation name="findObject">
+          <parameter name="ClassName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="condition">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="findObjects">
+          <parameter name="ClassName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="condition">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="createObject">
+          <parameter name="ClassName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="addObject">
+          <parameter name="ClassName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="releaseObject">
+          <parameter name="ClassName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="ob">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="Class"/>
+          </parameter>
+        </operation>
+        <operation name="findLinkedObject">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="condition">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <operation name="findLinkedObjects">
+          <parameter name="assoName">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <parameter name="condition">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+        </operation>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.0"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.1"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.2"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.3"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.4"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.5"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.6"/>
+        <reference name="class" ismultiple="true" type="Association" class="/1/@classdiagram/@class.7"/>
+        <reference name="service" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.9"/>
+        <reference name="service" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.10"/>
+        <reference name="service" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.11"/>
+        <reference name="service" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.12"/>
+        <reference name="service" isReverseAssociation="true" type="Association" class="/1/@classdiagram/@class.13"/>
+      </class>
+      <class description="LibraryManageSystemSystem" name="LibraryManageSystemSystem">
+        <operation name="searchDataBase">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <reference name="manager" type="Association" class="/1/@classdiagram/@class.8"/>
+      </class>
+      <class description="ThirdPartyServices" name="ThirdPartyServices">
+        <reference name="manager" type="Association" class="/1/@classdiagram/@class.8"/>
+      </class>
+      <class description="SearchBookService" name="SearchBookService">
+        <operation name="inputCard">
+          <parameter name="cardID">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="inputPassword">
+          <parameter name="password">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="searchBook">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="printBookList">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <reference name="manager" type="Association" class="/1/@classdiagram/@class.8"/>
+      </class>
+      <class description="ReturnBookService" name="ReturnBookService">
+        <operation name="checkStudentCard">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="checkBookStatus">
+          <parameter name="password">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="returnBook">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="updateDataBase">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <reference name="manager" type="Association" class="/1/@classdiagram/@class.8"/>
+      </class>
+      <class description="BuyBookService" name="BuyBookService">
+        <operation name="loginAccount">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="checkCurBookNum">
+          <parameter name="password">
+            <type xsi:type="designModel:PrimitiveTypeCS" name="String"/>
+          </parameter>
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="buyBook">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <operation name="updateBookData">
+          <returntype xsi:type="designModel:PrimitiveTypeCS" name="Boolean"/>
+        </operation>
+        <reference name="manager" type="Association" class="/1/@classdiagram/@class.8"/>
+      </class>
+    </classdiagram>
+    <sequencediagram name="LibraryManageSystem">
+      <interaction name="inputCard" participants="/0 /1/@classdiagram/@class.11 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="inputCard(cardID)" sendingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.0/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.0/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.0/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.0/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.0/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.0/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message1EES" execution="/1/@sequencediagram.0/@interaction.0/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message1SE" context="/1/@sequencediagram.0/@interaction.0/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message1RE" context="/1/@sequencediagram.0/@interaction.0/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message1SER" context="/1/@sequencediagram.0/@interaction.0/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message1RER" context="/1/@sequencediagram.0/@interaction.0/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message1EEE" execution="/1/@sequencediagram.0/@interaction.0/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.0/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.0/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.0/@abstractend.0" end="/1/@sequencediagram.0/@interaction.0/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.11" start="/1/@sequencediagram.0/@interaction.0/@abstractend.1" end="/1/@sequencediagram.0/@interaction.0/@abstractend.10" name="SearchBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.0/@abstractend.4" end="/1/@sequencediagram.0/@interaction.0/@abstractend.9" name="execution1"/>
+      </interaction>
+      <interaction name="inputPassword" participants="/0 /1/@classdiagram/@class.11 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="inputPassword(password)" sendingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.1/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.1/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.1/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.1/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.1/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.1/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message2EES" execution="/1/@sequencediagram.0/@interaction.1/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message2SE" context="/1/@sequencediagram.0/@interaction.1/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message2RE" context="/1/@sequencediagram.0/@interaction.1/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message2SER" context="/1/@sequencediagram.0/@interaction.1/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message2RER" context="/1/@sequencediagram.0/@interaction.1/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message2EEE" execution="/1/@sequencediagram.0/@interaction.1/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.1/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.1/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.1/@abstractend.0" end="/1/@sequencediagram.0/@interaction.1/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.11" start="/1/@sequencediagram.0/@interaction.1/@abstractend.1" end="/1/@sequencediagram.0/@interaction.1/@abstractend.10" name="SearchBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.1/@abstractend.4" end="/1/@sequencediagram.0/@interaction.1/@abstractend.9" name="execution2"/>
+      </interaction>
+      <interaction name="searchBook" participants="/0 /1/@classdiagram/@class.11 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="searchBook(" sendingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.2/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.2/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.2/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.2/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.2/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.2/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message3EES" execution="/1/@sequencediagram.0/@interaction.2/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message3SE" context="/1/@sequencediagram.0/@interaction.2/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message3RE" context="/1/@sequencediagram.0/@interaction.2/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message3SER" context="/1/@sequencediagram.0/@interaction.2/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message3RER" context="/1/@sequencediagram.0/@interaction.2/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message3EEE" execution="/1/@sequencediagram.0/@interaction.2/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.2/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.2/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.2/@abstractend.0" end="/1/@sequencediagram.0/@interaction.2/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.11" start="/1/@sequencediagram.0/@interaction.2/@abstractend.1" end="/1/@sequencediagram.0/@interaction.2/@abstractend.10" name="SearchBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.2/@abstractend.4" end="/1/@sequencediagram.0/@interaction.2/@abstractend.9" name="execution3"/>
+      </interaction>
+      <interaction name="printBookList" participants="/0 /1/@classdiagram/@class.11 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="printBookList(" sendingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.3/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.3/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.3/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.3/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.3/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.3/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message4EES" execution="/1/@sequencediagram.0/@interaction.3/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message4SE" context="/1/@sequencediagram.0/@interaction.3/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message4RE" context="/1/@sequencediagram.0/@interaction.3/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message4SER" context="/1/@sequencediagram.0/@interaction.3/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message4RER" context="/1/@sequencediagram.0/@interaction.3/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message4EEE" execution="/1/@sequencediagram.0/@interaction.3/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.11" execution="/1/@sequencediagram.0/@interaction.3/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.3/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.3/@abstractend.0" end="/1/@sequencediagram.0/@interaction.3/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.11" start="/1/@sequencediagram.0/@interaction.3/@abstractend.1" end="/1/@sequencediagram.0/@interaction.3/@abstractend.10" name="SearchBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.3/@abstractend.4" end="/1/@sequencediagram.0/@interaction.3/@abstractend.9" name="execution4"/>
+      </interaction>
+      <interaction name="returnBook" participants="/0 /1/@classdiagram/@class.9 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="returnBook(" sendingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.4/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.4/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.4/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.4/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.4/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.4/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message5EES" execution="/1/@sequencediagram.0/@interaction.4/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message5SE" context="/1/@sequencediagram.0/@interaction.4/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message5RE" context="/1/@sequencediagram.0/@interaction.4/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message5SER" context="/1/@sequencediagram.0/@interaction.4/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message5RER" context="/1/@sequencediagram.0/@interaction.4/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message5EEE" execution="/1/@sequencediagram.0/@interaction.4/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.4/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.4/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.4/@abstractend.0" end="/1/@sequencediagram.0/@interaction.4/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.9" start="/1/@sequencediagram.0/@interaction.4/@abstractend.1" end="/1/@sequencediagram.0/@interaction.4/@abstractend.10" name="LibraryManageSystemSystem"/>
+        <execution start="/1/@sequencediagram.0/@interaction.4/@abstractend.4" end="/1/@sequencediagram.0/@interaction.4/@abstractend.9" name="execution5"/>
+      </interaction>
+      <interaction name="buyBook" participants="/0 /1/@classdiagram/@class.9 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="buyBook(" sendingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.5/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.5/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.5/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.5/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.5/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.5/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message6EES" execution="/1/@sequencediagram.0/@interaction.5/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message6SE" context="/1/@sequencediagram.0/@interaction.5/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message6RE" context="/1/@sequencediagram.0/@interaction.5/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message6SER" context="/1/@sequencediagram.0/@interaction.5/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message6RER" context="/1/@sequencediagram.0/@interaction.5/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message6EEE" execution="/1/@sequencediagram.0/@interaction.5/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.5/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.5/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.5/@abstractend.0" end="/1/@sequencediagram.0/@interaction.5/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.9" start="/1/@sequencediagram.0/@interaction.5/@abstractend.1" end="/1/@sequencediagram.0/@interaction.5/@abstractend.10" name="LibraryManageSystemSystem"/>
+        <execution start="/1/@sequencediagram.0/@interaction.5/@abstractend.4" end="/1/@sequencediagram.0/@interaction.5/@abstractend.9" name="execution6"/>
+      </interaction>
+      <interaction name="searchDataBase" participants="/0 /1/@classdiagram/@class.9 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="searchDataBase(" sendingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.6/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.6/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.6/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.6/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.6/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.6/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message7EES" execution="/1/@sequencediagram.0/@interaction.6/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message7SE" context="/1/@sequencediagram.0/@interaction.6/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message7RE" context="/1/@sequencediagram.0/@interaction.6/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message7SER" context="/1/@sequencediagram.0/@interaction.6/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message7RER" context="/1/@sequencediagram.0/@interaction.6/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message7EEE" execution="/1/@sequencediagram.0/@interaction.6/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.9" execution="/1/@sequencediagram.0/@interaction.6/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.6/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.6/@abstractend.0" end="/1/@sequencediagram.0/@interaction.6/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.9" start="/1/@sequencediagram.0/@interaction.6/@abstractend.1" end="/1/@sequencediagram.0/@interaction.6/@abstractend.10" name="LibraryManageSystemSystem"/>
+        <execution start="/1/@sequencediagram.0/@interaction.6/@abstractend.4" end="/1/@sequencediagram.0/@interaction.6/@abstractend.9" name="execution7"/>
+      </interaction>
+      <interaction name="checkStudentCard" participants="/0 /1/@classdiagram/@class.12 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="checkStudentCard(" sendingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.7/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.7/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.7/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.7/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.7/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.7/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message8EES" execution="/1/@sequencediagram.0/@interaction.7/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message8SE" context="/1/@sequencediagram.0/@interaction.7/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message8RE" context="/1/@sequencediagram.0/@interaction.7/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message8SER" context="/1/@sequencediagram.0/@interaction.7/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message8RER" context="/1/@sequencediagram.0/@interaction.7/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message8EEE" execution="/1/@sequencediagram.0/@interaction.7/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.7/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.7/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.7/@abstractend.0" end="/1/@sequencediagram.0/@interaction.7/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.12" start="/1/@sequencediagram.0/@interaction.7/@abstractend.1" end="/1/@sequencediagram.0/@interaction.7/@abstractend.10" name="ReturnBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.7/@abstractend.4" end="/1/@sequencediagram.0/@interaction.7/@abstractend.9" name="execution8"/>
+      </interaction>
+      <interaction name="checkBookStatus" participants="/0 /1/@classdiagram/@class.12 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="checkBookStatus(password)" sendingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.8/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.8/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.8/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.8/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.8/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.8/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message9EES" execution="/1/@sequencediagram.0/@interaction.8/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message9SE" context="/1/@sequencediagram.0/@interaction.8/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message9RE" context="/1/@sequencediagram.0/@interaction.8/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message9SER" context="/1/@sequencediagram.0/@interaction.8/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message9RER" context="/1/@sequencediagram.0/@interaction.8/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message9EEE" execution="/1/@sequencediagram.0/@interaction.8/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.8/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.8/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.8/@abstractend.0" end="/1/@sequencediagram.0/@interaction.8/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.12" start="/1/@sequencediagram.0/@interaction.8/@abstractend.1" end="/1/@sequencediagram.0/@interaction.8/@abstractend.10" name="ReturnBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.8/@abstractend.4" end="/1/@sequencediagram.0/@interaction.8/@abstractend.9" name="execution9"/>
+      </interaction>
+      <interaction name="updateDataBase" participants="/0 /1/@classdiagram/@class.12 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="updateDataBase(" sendingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.9/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.9/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.9/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.9/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.9/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.9/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message10EES" execution="/1/@sequencediagram.0/@interaction.9/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message10SE" context="/1/@sequencediagram.0/@interaction.9/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message10RE" context="/1/@sequencediagram.0/@interaction.9/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message10SER" context="/1/@sequencediagram.0/@interaction.9/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message10RER" context="/1/@sequencediagram.0/@interaction.9/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message10EEE" execution="/1/@sequencediagram.0/@interaction.9/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.12" execution="/1/@sequencediagram.0/@interaction.9/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.9/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.9/@abstractend.0" end="/1/@sequencediagram.0/@interaction.9/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.12" start="/1/@sequencediagram.0/@interaction.9/@abstractend.1" end="/1/@sequencediagram.0/@interaction.9/@abstractend.10" name="ReturnBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.9/@abstractend.4" end="/1/@sequencediagram.0/@interaction.9/@abstractend.9" name="execution10"/>
+      </interaction>
+      <interaction name="loginAccount" participants="/0 /1/@classdiagram/@class.13 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="loginAccount(" sendingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.10/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.10/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.10/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.10/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.10/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.10/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message11EES" execution="/1/@sequencediagram.0/@interaction.10/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message11SE" context="/1/@sequencediagram.0/@interaction.10/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message11RE" context="/1/@sequencediagram.0/@interaction.10/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message11SER" context="/1/@sequencediagram.0/@interaction.10/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message11RER" context="/1/@sequencediagram.0/@interaction.10/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message11EEE" execution="/1/@sequencediagram.0/@interaction.10/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.10/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.10/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.10/@abstractend.0" end="/1/@sequencediagram.0/@interaction.10/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.13" start="/1/@sequencediagram.0/@interaction.10/@abstractend.1" end="/1/@sequencediagram.0/@interaction.10/@abstractend.10" name="BuyBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.10/@abstractend.4" end="/1/@sequencediagram.0/@interaction.10/@abstractend.9" name="execution11"/>
+      </interaction>
+      <interaction name="checkCurBookNum" participants="/0 /1/@classdiagram/@class.13 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="checkCurBookNum(password)" sendingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.11/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.11/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.11/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.11/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.11/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.11/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message12EES" execution="/1/@sequencediagram.0/@interaction.11/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message12SE" context="/1/@sequencediagram.0/@interaction.11/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message12RE" context="/1/@sequencediagram.0/@interaction.11/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message12SER" context="/1/@sequencediagram.0/@interaction.11/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message12RER" context="/1/@sequencediagram.0/@interaction.11/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message12EEE" execution="/1/@sequencediagram.0/@interaction.11/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.11/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.11/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.11/@abstractend.0" end="/1/@sequencediagram.0/@interaction.11/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.13" start="/1/@sequencediagram.0/@interaction.11/@abstractend.1" end="/1/@sequencediagram.0/@interaction.11/@abstractend.10" name="BuyBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.11/@abstractend.4" end="/1/@sequencediagram.0/@interaction.11/@abstractend.9" name="execution12"/>
+      </interaction>
+      <interaction name="updateBookData" participants="/0 /1/@classdiagram/@class.13 /1/@classdiagram/@class.8">
+        <message xsi:type="designModel:callMessage" name="updateBookData(" sendingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.2" receivingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.3"/>
+        <message xsi:type="designModel:callMessage" sendingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.5" receivingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.6"/>
+        <message xsi:type="designModel:ReturnMessage" name="result = true" sendingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.7" receivingEnd="/1/@sequencediagram.0/@interaction.12/@abstractend.8" invocationmessage="/1/@sequencediagram.0/@interaction.12/@message.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndS" context="/0" execution="/1/@sequencediagram.0/@interaction.12/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndS" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.12/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageStart" context="/1/@sequencediagram.0/@interaction.12/@execution.0"/>
+        <abstractend xsi:type="designModel:MixEnd" name="callMessageEnd" context="/1/@sequencediagram.0/@interaction.12/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message13EES" execution="/1/@sequencediagram.0/@interaction.12/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message13SE" context="/1/@sequencediagram.0/@interaction.12/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message13RE" context="/1/@sequencediagram.0/@interaction.12/@execution.2"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message13SER" context="/1/@sequencediagram.0/@interaction.12/@execution.1"/>
+        <abstractend xsi:type="designModel:MixEnd" name="message13RER" context="/1/@sequencediagram.0/@interaction.12/@execution.0"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="message13EEE" execution="/1/@sequencediagram.0/@interaction.12/@execution.2"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="serviceExecutionEndE" context="/1/@classdiagram/@class.13" execution="/1/@sequencediagram.0/@interaction.12/@execution.1"/>
+        <abstractend xsi:type="designModel:ExecutionEnd" name="controllerExecutionEndE" context="/0" execution="/1/@sequencediagram.0/@interaction.12/@execution.0"/>
+        <execution participant="/0" start="/1/@sequencediagram.0/@interaction.12/@abstractend.0" end="/1/@sequencediagram.0/@interaction.12/@abstractend.11" name="controller"/>
+        <execution participant="/1/@classdiagram/@class.13" start="/1/@sequencediagram.0/@interaction.12/@abstractend.1" end="/1/@sequencediagram.0/@interaction.12/@abstractend.10" name="BuyBookService"/>
+        <execution start="/1/@sequencediagram.0/@interaction.12/@abstractend.4" end="/1/@sequencediagram.0/@interaction.12/@abstractend.9" name="execution13"/>
+      </interaction>
+    </sequencediagram>
+  </designModel:DesignModel>
+</xmi:XMI>

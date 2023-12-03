@@ -4,7 +4,7 @@
     <semanticResources>librarymanagesystem.remodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_CnYgIHWTEe6FlalIwYgasQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_CnkGUHWTEe6FlalIwYgasQ" name="LibraryManageSystem Conceptual Class Diagram" repPath="#_Cni4MHWTEe6FlalIwYgasQ" changeId="241f2803-ebd1-4e75-a380-1a148b41cbd1">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_CnkGUHWTEe6FlalIwYgasQ" name="LibraryManageSystem Conceptual Class Diagram" repPath="#_Cni4MHWTEe6FlalIwYgasQ" changeId="cf4f686d-cece-4ed2-857e-f419b5d9db41">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
         <target xmi:type="rEMODEL:DomainModel" href="librarymanagesystem.remodel#//@DomainModel"/>
       </ownedRepresentationDescriptors>
@@ -12,7 +12,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']"/>
         <target xmi:type="rEMODEL:UseCaseModel" href="librarymanagesystem.remodel#//@UseCaseModel"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LL2SkHX2Ee6FlalIwYgasQ" name="SearchBookSSD" repPath="#_LL1EcHX2Ee6FlalIwYgasQ" changeId="7d7ddc47-def5-46ec-a2be-a1cf056540b2">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LL2SkHX2Ee6FlalIwYgasQ" name="SearchBookSSD" repPath="#_LL1EcHX2Ee6FlalIwYgasQ" changeId="8ad10f76-9000-40f2-9b2c-76d0eb415f23">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0"/>
       </ownedRepresentationDescriptors>
@@ -183,7 +183,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_LhN9dnYpEe6YTqIXSlIdWA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_LhN9cXYpEe6YTqIXSlIdWA" fontName=".AppleSystemUIFont" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LhN9cnYpEe6YTqIXSlIdWA" x="672" y="201" width="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LhN9cnYpEe6YTqIXSlIdWA" x="544" y="200" width="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_SvwAsHYpEe6YTqIXSlIdWA" type="2003" element="_Svnd0HYpEe6YTqIXSlIdWA">
           <children xmi:type="notation:Node" xmi:id="_SvwAs3YpEe6YTqIXSlIdWA" type="5007"/>
@@ -200,7 +200,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_SvwAtnYpEe6YTqIXSlIdWA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_SvwAsXYpEe6YTqIXSlIdWA" fontName=".AppleSystemUIFont" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SvwAsnYpEe6YTqIXSlIdWA" x="612" y="392" width="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SvwAsnYpEe6YTqIXSlIdWA" x="568" y="392" width="100"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_CnoXwnWTEe6FlalIwYgasQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_OzgnsHX0Ee6FlalIwYgasQ" type="4001" element="_OzZS8HX0Ee6FlalIwYgasQ" source="_duk6cHWUEe6FlalIwYgasQ" target="_GLo_IHWVEe6FlalIwYgasQ">
@@ -317,33 +317,33 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_aB9DAHYpEe6YTqIXSlIdWA" type="4001" element="_aB1HMHYpEe6YTqIXSlIdWA" source="_LhN9cHYpEe6YTqIXSlIdWA" target="_SvwAsHYpEe6YTqIXSlIdWA">
           <children xmi:type="notation:Node" xmi:id="_aB9DBHYpEe6YTqIXSlIdWA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DBXYpEe6YTqIXSlIdWA" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DBXYpEe6YTqIXSlIdWA" x="5" y="-6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_aB9DBnYpEe6YTqIXSlIdWA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DB3YpEe6YTqIXSlIdWA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DB3YpEe6YTqIXSlIdWA" x="-7" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_aB9DCHYpEe6YTqIXSlIdWA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DCXYpEe6YTqIXSlIdWA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aB9DCXYpEe6YTqIXSlIdWA" x="-7" y="8"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_aB9DAXYpEe6YTqIXSlIdWA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_aB9DAnYpEe6YTqIXSlIdWA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aB9DA3YpEe6YTqIXSlIdWA" points="[0, 0, 37, -137]$[-37, 137, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aB9DA3YpEe6YTqIXSlIdWA" points="[0, 0, -47, -138]$[47, 138, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aB9qEHYpEe6YTqIXSlIdWA" id="(0.37755102040816324,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aB9qEXYpEe6YTqIXSlIdWA" id="(0.6122448979591837,0.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_akd6VnYpEe6YTqIXSlIdWA" type="4001" element="_akbeIHYpEe6YTqIXSlIdWA" source="_SvwAsHYpEe6YTqIXSlIdWA" target="_5DFORnYoEe6YTqIXSlIdWA">
           <children xmi:type="notation:Node" xmi:id="_akd6WnYpEe6YTqIXSlIdWA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akd6W3YpEe6YTqIXSlIdWA" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akd6W3YpEe6YTqIXSlIdWA" x="3" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_akehQHYpEe6YTqIXSlIdWA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akehQXYpEe6YTqIXSlIdWA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akehQXYpEe6YTqIXSlIdWA" x="-1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_akehQnYpEe6YTqIXSlIdWA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akehQ3YpEe6YTqIXSlIdWA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_akehQ3YpEe6YTqIXSlIdWA" y="11"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_akd6V3YpEe6YTqIXSlIdWA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_akd6WHYpEe6YTqIXSlIdWA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_akd6WXYpEe6YTqIXSlIdWA" points="[0, 0, 396, -92]$[-396, 92, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_akd6WXYpEe6YTqIXSlIdWA" points="[0, 0, 352, -92]$[-352, 92, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_akehRHYpEe6YTqIXSlIdWA" id="(0.0,0.18181818181818182)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_akehRXYpEe6YTqIXSlIdWA" id="(0.40816326530612246,0.0)"/>
         </edges>
@@ -647,6 +647,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LhGBoHYpEe6YTqIXSlIdWA" name="LibraryManager" outgoingEdges="_aB1HMHYpEe6YTqIXSlIdWA" width="10">
       <target xmi:type="rEMODEL:Entity" href="librarymanagesystem.remodel#//@DomainModel/@entity.6"/>
       <semanticElements xmi:type="rEMODEL:Entity" href="librarymanagesystem.remodel#//@DomainModel/@entity.6"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_LhGosHYpEe6YTqIXSlIdWA" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" backgroundStyle="Liquid" foregroundColor="194,239,255">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
@@ -672,6 +675,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Svnd0HYpEe6YTqIXSlIdWA" name="BuyBookAction" outgoingEdges="_akbeIHYpEe6YTqIXSlIdWA" incomingEdges="_aB1HMHYpEe6YTqIXSlIdWA" width="10">
       <target xmi:type="rEMODEL:Entity" href="librarymanagesystem.remodel#//@DomainModel/@entity.7"/>
       <semanticElements xmi:type="rEMODEL:Entity" href="librarymanagesystem.remodel#//@DomainModel/@entity.7"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_SvoE4HYpEe6YTqIXSlIdWA" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" backgroundStyle="Liquid" foregroundColor="194,239,255">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@style"/>
@@ -1120,7 +1126,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_edfF8nX3Ee6FlalIwYgasQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_edee0XX3Ee6FlalIwYgasQ" fontName=".AppleSystemUIFont" fontHeight="12" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_edee0nX3Ee6FlalIwYgasQ" x="90" y="50" width="120" height="50"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_edee0nX3Ee6FlalIwYgasQ" x="194" y="50" width="120" height="50"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_LL9AQnX2Ee6FlalIwYgasQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_wIWlJXX3Ee6FlalIwYgasQ" type="4001" element="_wIOCQ3X3Ee6FlalIwYgasQ" source="_edfF4HX3Ee6FlalIwYgasQ" target="_edfF63X3Ee6FlalIwYgasQ">
@@ -1277,14 +1283,14 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_edaNY3X3Ee6FlalIwYgasQ" name=":SearchBookService" width="12" height="5" resizeKind="NSEW">
       <target xmi:type="rEMODEL:Service" href="librarymanagesystem.remodel#//@UseCaseModel/@service.2"/>
       <semanticElements xmi:type="rEMODEL:Service" href="librarymanagesystem.remodel#//@UseCaseModel/@service.2"/>
-      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ3XX7Ee6FlalIwYgasQ" x="90" y="50" height="50" width="120"/>
+      <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ3XX7Ee6FlalIwYgasQ" x="194" y="50" height="50" width="120"/>
       <ownedBorderedNodes xmi:type="diagram:DNode" uid="_edaNaXX3Ee6FlalIwYgasQ" outgoingEdges="_wIOCSHX3Ee6FlalIwYgasQ _-GG5gXX3Ee6FlalIwYgasQ _ShfYlXX4Ee6FlalIwYgasQ _W_RLYHX4Ee6FlalIwYgasQ" incomingEdges="_wIOCQ3X3Ee6FlalIwYgasQ _-GG5eHX3Ee6FlalIwYgasQ _ShfYiHX4Ee6FlalIwYgasQ _W_QkZHX4Ee6FlalIwYgasQ" width="1" height="100" resizeKind="NSEW">
         <target xmi:type="rEMODEL:Service" href="librarymanagesystem.remodel#//@UseCaseModel/@service.2"/>
         <semanticElements xmi:type="rEMODEL:Service" href="librarymanagesystem.remodel#//@UseCaseModel/@service.2"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_wIOCQHX3Ee6FlalIwYgasQ" width="1" height="6" resizeKind="NORTH_SOUTH">
           <target xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.0"/>
           <semanticElements xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.0"/>
-          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0HX7Ee6FlalIwYgasQ" x="145" y="112" height="60" width="10"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0HX7Ee6FlalIwYgasQ" x="249" y="112" height="60" width="10"/>
           <ownedStyle xmi:type="diagram:Square" uid="_wIOCQXX3Ee6FlalIwYgasQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
           </ownedStyle>
@@ -1293,7 +1299,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_-GGSbnX3Ee6FlalIwYgasQ" width="1" height="6" resizeKind="NORTH_SOUTH">
           <target xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.1"/>
           <semanticElements xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.1"/>
-          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0XX7Ee6FlalIwYgasQ" x="145" y="177" height="60" width="10"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0XX7Ee6FlalIwYgasQ" x="249" y="177" height="60" width="10"/>
           <ownedStyle xmi:type="diagram:Square" uid="_-GG5cHX3Ee6FlalIwYgasQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
           </ownedStyle>
@@ -1302,7 +1308,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_ShexeHX4Ee6FlalIwYgasQ" width="1" height="6" resizeKind="NORTH_SOUTH">
           <target xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.2"/>
           <semanticElements xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.2"/>
-          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0nX7Ee6FlalIwYgasQ" x="145" y="242" height="60" width="10"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ0nX7Ee6FlalIwYgasQ" x="249" y="242" height="60" width="10"/>
           <ownedStyle xmi:type="diagram:Square" uid="_ShexeXX4Ee6FlalIwYgasQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
           </ownedStyle>
@@ -1311,7 +1317,7 @@
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_W_P9S3X4Ee6FlalIwYgasQ" width="1" height="6" resizeKind="NORTH_SOUTH">
           <target xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.3"/>
           <semanticElements xmi:type="rEMODEL:Execution" href="librarymanagesystem.remodel#//@UseCaseModel/@interaction.0/@executions.3"/>
-          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ03X7Ee6FlalIwYgasQ" x="145" y="307" height="60" width="10"/>
+          <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_PAOJ03X7Ee6FlalIwYgasQ" x="249" y="307" height="60" width="10"/>
           <ownedStyle xmi:type="diagram:Square" uid="_W_QkUHX4Ee6FlalIwYgasQ" showIcon="false" borderSize="1" borderSizeComputationExpression="1" width="1" height="6" color="199,237,232">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']/@borderedNodeMappings[name='Lifeline']/@borderedNodeMappings[name='Execution']/@style"/>
           </ownedStyle>
